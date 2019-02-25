@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--模拟屏幕区域-->
+		<div id="wrap">
+			<!--header-->
+			<header id="header">
+		  		<div class="city">广州</div>
+				<h2>星光大道测试影院</h2>
+				<span class="icon"></span>
+			</header>
+			
+			<!--内容区域-->
+			<section id="conWrap">
+				<div class="content">
+					<!--banner-->
+					<div class="banner">			
+							<img src="img/banner.png" alt="" />
+					</div>
+					<!--nav-->
+					<nav class="navWrap">
+						<a href="javascript:;" class="active">正在热映</a>
+						<a href="javascript:;">即将上映</a>
+						<span class="smallGray"></span>
+					</nav>
+					<!--电影详细信息-->
+					<ul class="list">
+						<li>
+							<div class="liTop">
+								<img src="img/pic1.png" alt="" />
+								<div class="line">
+								<div class="liContent">
+									<h3>加勒比海盗5:死无对证..</h3>
+									<p>导演：乔阿吉姆</p>
+									<p>主演：约翰尼</p>
+									<p>120分钟/英语</p>
+									<div class="icons">
+										<span>首映</span>
+										<span>特惠</span>
+										<span>明星</span>
+										<span>点映</span>
+									</div>
+								</div>
+								<div class="iMax">IMAX</div>
+								<div class="RMB">¥10.<span>0起</span>
+								</div>
+								<div class="pay">购票</div>
+								</div>
+							</div>
+							<div class="liTime">
+								<h4>今日排期</h4>
+								<div class="timeList">
+									<div class="time1">
+										<span>10:00</span>
+										<span>12:06</span>
+										<span>13:25</span>
+										<span>14:00</span>
+									</div>
+									<div class="time2">
+										<span>10:00</span>
+										<span>12:06</span>
+										<span>13:25</span>
+										<span>14:00</span>
+									</div>
+								</div>
+								<a href="javascript:;" class=""></a>	
+							</div>
+						</li>
+					<li>
+							<div class="liTop">
+								<img src="img/pic2.png" alt="" />
+								<div class="line">
+								<div class="liContent">
+									<h3>春娇救志明</h3>
+									<p>导演：乔阿吉姆</p>
+									<p>主演：约翰尼</p>
+									<p>120分钟/英语</p>
+									<div class="icons">
+										<span>首映</span>
+										<span>特惠</span>
+										<span>明星</span>
+										<span>点映</span>
+									</div>
+								</div>
+								<div class="iMax">IMAX</div>
+								<div class="RMB">¥10.<span>0起</span>
+								</div>
+								<div class="pay">购票</div>
+								</div>
+							</div>
+							<div class="liTime">
+								<h4>今日排期</h4>
+								<div class="timeList ">
+									<div class="time1">
+										<span>10:00</span>
+										<span>12:06</span>
+										<span>13:25</span>
+										<span>14:00</span>
+									</div>
+									<div class="time2 active">
+										<span>10:00</span>
+										<span>12:06</span>
+										<span>13:25</span>
+										<span>14:00</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="active"></a>	
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--电影院地址信息-->
+					<div id="film">
+						<img src="img/star.png"/>
+						<span>星光大道影院</span>
+						<p>广州市白云区大龙街道彭东大街星光大道广场12楼</p>
+						<p>020-81562222</p>
+					</div>
+					<!--footer-->
+					<footer id="footer">
+						<div class="home active">
+							<span>购票</span>
+						</div>
+						<div class="store">
+							<span>商城</span>
+						</div>
+						<div class="activity">
+							<span>活动</span>
+						</div>
+						<div class="mine">
+							<span>我的</span>
+						</div>
+					</footer>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		document.addEventListener('touchstart',function(event){
+			event.preventDefault();
+		});
+		
+		(function(){
+			var aNodes = document.querySelectorAll('a');
+			for (var i =0;i<aNodes.length;i++) {
+				aNodes[i].addEventListener('touchstart',function(){
+					window.location = this.href;
+				});
+			};
+		})();
+		
+		(function(){
+			var width = document.documentElement.clientWidth;
+			var styleNode = document.createElement('style');
+			styleNode.innerHTML = 'html{font-size: '+width/16 +'px !important;}';
+			document.head.appendChild(styleNode);
+		})();
+	</script>
+</html>
